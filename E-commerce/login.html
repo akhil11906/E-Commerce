@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>header</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+    	<div class="logo">
+    	<img src="./logo.png" alt="logo"/>
+        </div>
+        <nav class="navbar">
+        	<ul class="unorder">
+        		<li class="list"><a href="E-commerce.html">home</a></li>
+        		<li class="list"><a href="shop.html">shop</a></li>
+        		<li class="list"><a href="my-account.html">my account</a></li>
+        		<li class="list"><a href="compare.html">compare</a></li>
+        		<li class="list"><a href="login.html">login</a></li>
+        	</ul>
+        </nav>
+        <div class="cart">
+        		<input class="searchicon" type="text" name="search" placeholder="search products"/>
+        		<a class="icon" href="#"><img src="./icon-heart.svg" width="20px" height="20px" ></a>
+        		<a class="icon" href="#"><img src="./icon-cart.svg" width="20px" height="20px"></a>
+        </div>
+    </header>
+    <main>
+        <section>
+        <div class="locate">
+            <p>Home > <span>Login</span></p>
+        </div>
+        </section>
+        <section class="forms">
+        <form class="form1">
+            <h2>Login</h2></br>
+            <label for="email" class="lab">Email:<span class="req">*</span></label>
+            <input id="email" type="text" name="email" placeholder="Enter email/mobile-no:"></br>
+            <span class="dnone" id="eerr"> Please Enter Email</span></br>
+            <label for="pwd" class="lab">Password:<span class="req">*</span></label>
+            <input id="pwd" type="password" name="pwd" placeholder="Enter password"></br>
+            <span class="dnone" id="perr"> Please Enter Password</span>
+            <input class="btn" id="btn" type="button" value="Login">
+        </form>
+        <form class="form2">
+            <h2>Create An Account</h2>
+            <input id="user" type="text" name="username" placeholder="Username"></br>
+            <span class="dnone" id="uerr"> Please Enter Username</span>
+            <input id="mail" type="text" name="mail" placeholder="Your Email"></br>
+            <span class="dnone" id="merr"> Please Enter Email</span>
+            <input id="pd" type="password" name="pwd" placeholder="Your password"></br>
+            <span class="dnone" id="prr"> Please Enter password</span>
+            <input id="cpwd" type="password" name="cmpwd" placeholder="Confirm password"></br>
+            <span class="dnone" id="crr"> Please Confirm your password</span>
+            <input class="btn" id="bn" type="button" value="Submit & Register">            
+        </form>
+    </section>
+    </main>
+       <section class="details">
+        <p><img src="icon-email.svg"> Sign in to Newsletter</p>
+        <p>...and recieve $25 coupon for first shopping.</p>
+        <div class="mail">
+        <input type="text" name="email" placeholder="Enter Your Email">
+        <button class="b2">Subscribe</button>  
+        </div> 
+    </section>
+    </main>
+    <footer class="edge">
+        <section class="location">
+            <img src="logo.png" class="logo">  
+            <small>Contact</small>
+            <p>Address:13 Tlemcen Road,Street 32, Beb-Wahren</p>
+            <p>Phone:+01 2222 365 /(+91)01 2345 65758</p>
+            <p>Hours:10:00-18:00,Mon-Sat</p>
+            <h6>Follow Me</h6>
+            <img src="icon-facebook.svg" class="social">
+            <img src="icon-instagram.svg" class="social">
+            <img src="icon-pinterest.svg" class="social">
+            <img src="icon-twitter.svg" class="social">
+            <img src="icon-youtube.svg" class="social">
+        </section>
+        <section class="about">
+            <h4>Address</h4>
+            <nav class="info">
+                <ul class="unor">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#"> Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Support Center</a></li>
+                </ul>   
+            </nav>
+        </section>
+        <section class="about">
+            <h4>My Account</h4>
+            <nav class="info">
+                <ul class="unor">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">View Cart</a></li>
+                    <li><a href="#">My Wishlist</a></li>
+                    <li><a href="#">Track My Order</a></li>
+                    <li><a href="#">help</a></li>
+                    <li><a href="#">Order</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="payment">
+            <h4>Secured Payed Gateways</h4>
+            <img src="payment-method.png">
+        </section>
+    </footer>
+    <hr>
+    <div class="akhil">
+        <p>@2024AKHIL,All right reserved</p>
+        <p>Design by AKHIL</p>
+    </div>
+    <script>
+        document.getElementById('btn').addEventListener('click',()=> {
+           let email=document.getElementById('email').value;
+           let password=document.getElementById('pwd').value;
+
+           if (email==""){
+               document.getElementById('eerr').style.display="block"
+           }
+           else{
+               document.getElementById('eerr').style.display="none"
+           }
+        
+        if (password==""){
+               console.log( document.getElementById('perr').style.display="block");
+           }
+           else{
+               document.getElementById('perr').style.display="none"
+           }
+       if (email!="" && password!="") {
+           alert("Login successful... thank you")
+       }
+
+       })
+
+       document.getElementById('bn').addEventListener('click',()=> {
+           let username=document.getElementById('user').value;
+           let email=document.getElementById('mail').value;
+           let password=document.getElementById('pd').value;
+           let confirm=document.getElementById('cpwd').value;
+
+           if (username==""){
+               document.getElementById('uerr').style.display="block"
+           }
+           else{
+               document.getElementById('uerr').style.display="none"
+           }
+
+           if (email==""){
+               document.getElementById('merr').style.display="block"
+           }
+           else{
+               document.getElementById('merr').style.display="none"
+           }
+        
+        if (password==""){
+               console.log( document.getElementById('prr').style.display="block");
+           }
+           else{
+               document.getElementById('prr').style.display="none"
+           }
+           if (confirm==""){
+               console.log( document.getElementById('crr').style.display="block");
+           }
+           else{
+               document.getElementById('crr').style.display="none"
+           }
+       if (email!="" && password!="" && confirm!=="" && username!=="") {
+           alert("Registration successful... thank you")
+       }
+
+       })
+      
+    </script>
+</body>
+</html>

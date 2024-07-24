@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <style>
+        header {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: lightgrey;
+            align-items: center;
+            padding: 10px;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            text-align: center;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        img {
+            width: 80%;
+            margin: -5px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .searchicon {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-image: url(./search.png);
+            background-repeat: no-repeat;
+            background-size: 30px 30px;
+            background-position: right center;
+            padding-right: 45px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./logo.png" alt="Logo" />
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Compare</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <div>
+            <form>
+                <input class="searchicon" type="text" name="search" placeholder="Search products" />
+                <a href="#"><img src="./icon-cart.svg" alt="Cart"></a>
+                <a href="#"><img src="./icon-heart.svg" alt="Wishlist"></a>
+            </form>
+        </div>
+    </header>
+</body>
+
+</html>

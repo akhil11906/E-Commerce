@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .card {
+            width: 300px;
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            display: block;
+        }
+        .icons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .icons i {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .card:hover .icons {
+            opacity: 1;
+        }
+        .card-content {
+            padding: 16px;
+        }
+        .badge {
+            display: inline-block;
+            background: #e0e0e0;
+            color: #555;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        .rating {
+            color: #ffc107;
+            margin: 8px 0;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 14px;
+            margin-left: 8px;
+        }
+    </style>
+    <title>Product Card with Hover Icons</title>
+</head>
+<body>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x300" alt="Colorful Pattern Shirt">
+        <div class="icons">
+            <i class="fa fa-shopping-cart"></i>
+            <i class="fa fa-heart"></i>
+            <i class="fa fa-share"></i>
+        </div>
+        <div class="card-content">
+            <span class="badge">Hot</span>
+            <div class="product-title">Colorful Pattern Shirts</div>
+            <div class="rating">★★★★★</div>
+            <div>
+                <span class="price">$238.85</span>
+                <span class="original-price">$245.80</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FontAwesome for the icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

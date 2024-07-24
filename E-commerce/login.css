@@ -1,0 +1,197 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 0 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+
+        }
+        .heading {
+            display: flex;
+        }
+         .heading h3 {
+            margin-right: 10px;
+        }
+
+        .heading h1 {
+            font-size: 1.4em;
+        }
+        .logo {
+            flex: 1;
+            margin-top: -10px;
+        }
+        .navbar .unorder  {
+            flex: 2;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar .unorder .list {
+            margin: 20px;
+        }
+        .cart {
+            flex: 2;
+            width: 100%;
+            margin-left: 180px;
+        }
+      .navbar .unorder .list {
+            list-style-type: none;
+            text-align:center;
+        }
+       .unorder .list a {
+            text-decoration: none;
+            color: black;
+        }
+        .logo img {
+            width: 100%;
+            max-width: 150px;
+            margin-top: -15px;
+        }
+        .icon {
+            margin-left: 20px;
+        }
+    .searchicon{
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-image:url(./search.png);
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: right center;
+            padding-right: 45px;
+            font-size: 16px;
+            margin-left: -10px;
+        }
+        .icon {
+            width: 30px;
+            height: 15px;
+        }
+        .locate {
+            background-color: grey;
+            padding: 8px;
+            margin-bottom: 30px;
+        }
+        .forms {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+        .form1 {
+            border:1px solid grey;
+            width: 40%; 
+            padding: 20px;
+            margin-bottom: 70px;
+        }
+        .form1 h2,input,button{
+            width: 60%;
+            padding: 10px;
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        .form1 input{
+            width:80%;
+            margin-top: 20px;
+        }
+        .form2 {
+            border:1px solid grey; 
+             width: 40%; 
+            padding: 20px;
+            margin-bottom: 70px;
+        }
+        .form2 h2,input{
+            width: 60%;
+            padding: 10px;
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: green;
+        }
+        .btn:hover{
+            background-color: white
+        }
+        .form2 input{
+            width:80%;
+            margin-top: 20px;
+        }
+
+        .item span {
+            color: green;
+        }
+        .details img{
+            width: 20px;
+            height: 20px;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid transparent;
+            background-color: #83988c;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .details p {
+            margin-top: 10px;
+        }
+
+        .mail {
+            display: flex;
+            margin-top: -15px;
+        }
+        .mail input{
+            width: 200%;
+        }
+        .mail .b2{
+            margin-left: 0px;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .location .logo {
+            width: 30%;
+        }
+        .location small {
+            margin-left: -110px;
+        }
+        .location h6 {
+            margin-top: 30px;
+        }
+        .info .unor li {
+            list-style-type: none;
+            padding: 8px;
+            color: black;
+            text-decoration: none;
+        }
+        .about .info .unor li a{
+            text-decoration: none;
+            color: black;
+        }
+        .social {
+            width: 5%;
+            height: 30px;
+        }
+        .akhil {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        /* .product .product1 {
+            background-image: url('product-1-2.jpg');
+        } */
+         .dnone{
+            display: none;
+            color: red;
+         }
+         .req {
+            color: red;
+         }

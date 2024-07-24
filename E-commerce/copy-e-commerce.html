@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>header</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+        	font-family: Arial, sans-serif;
+        	color: #333;
+        	padding: 0 20px;
+        }
+		header {
+		/*	display: grid;
+			grid-template-columns: 1fr 3fr 1fr;
+			background-color: #f8f8f8;
+			align-items: center;
+			padding: 10px 0;*/
+			display: flex;
+			justify-content: space-around;
+			margin-top: 30px;
+
+		}
+		.heading {
+			display: flex;
+		}
+		 .heading h3 {
+            margin-right: 10px;
+        }
+
+        .heading h1 {
+            font-size: 1.4em;
+        }
+		.logo {
+			flex: 1;
+            margin-top: -10px;
+		}
+		.navbar ul  {
+			flex: 2;
+			display: flex;
+			justify-content: space-around;
+		}
+		.navbar ul li {
+			margin: 20px;
+		}
+		.cart {
+			flex: 2;
+			width: 100%;
+			margin-left: 180px;
+		}
+	/*	ul {
+			display: grid;
+			grid-template-columns:repeat(5,1fr); 
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}*/
+	  .navbar ul li {
+			list-style-type: none;
+			text-align:center;
+		}
+		ul li a {
+			text-decoration: none;
+			color: black;
+		}
+		.logo img {
+			width: 100%;
+			max-width: 150px;
+            margin-top: -15px;
+		}
+		.icon {
+			margin-left: 20px;
+		}
+	/*	 {
+			display: grid;
+	        grid-template-columns: 1fr auto auto;
+	        align-items: center;
+	        gap : 10px;
+		}*/
+	.searchicon{
+			padding: 10px;
+			border: 1px solid black;
+			border-radius: 5px;
+			background-image:url(./search.png);
+			background-repeat: no-repeat;
+			background-size: 20px 20px;
+			background-position: right center;
+			padding-right: 45px;
+			font-size: 16px;
+			margin-left: -10px;
+		}
+		.icon {
+			width: 30px;
+			height: 30px;
+		}
+		.main-Home {
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+			grid-gap: 20px;
+			padding: 20px 0;
+			margin-top: 30px;
+		}
+		/*.home {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}*/
+		.home img{
+			max-width: 100%;
+		}
+		.offer {
+			margin-left: 50px;
+			margin-top: 60px;
+			padding: 10px;
+			/*text-align: center;*/
+			font-size: 24px;
+
+		}
+		.offer h6,h3,h1,button {
+			margin-top: 15px;
+		}
+		.offer button {
+			background-color: green;
+			border:1px solid green;
+			padding: 15px;
+			border-radius: 5px;
+		}
+		.offer button:hover{
+			background-color: white;
+		}
+		.offer h1 {
+			color: green;
+		}
+		.popular-categories {
+			display: grid;
+			grid-template-columns: repeat(6,1fr);
+			gap:20px;
+		}
+		.popular {
+			color: green;
+			margin-bottom:30px;
+			margin-top: 20px;
+		}
+		.category img {
+             width: 100%;
+             height: 150px;
+             border: 1px solid transparent;
+             border-radius: 10px;
+		}
+		.category {
+			text-align: center;
+			margin-bottom: 30px;
+			border: 1px solid green;
+			padding: 20px;
+			border-radius: 10px;
+		}
+		.buttons {
+			display: flex;
+			justify-content: left;
+			margin-top: 20px;
+		}
+		.buttons a{
+			margin: 0 10px;
+			padding: 10px 20px;
+			text-decoration: none;
+			background-color: lightgrey;
+			color: black;
+			border-radius: 5px;
+		}
+		.featured {
+			display: grid;
+			grid-template-columns: repeat(4,1fr);
+			justify-content: space-around;
+			margin-top: 30px;
+			grid-gap: 20px;
+		}
+		.product {
+			text-align: center;
+			margin-bottom: 30px;
+			border: 1px solid green;
+			widows: 100px;
+			padding: 10px;
+			border-radius: 10px;
+		}
+		.product img {
+			align-items: center;
+		     width: 90%;
+             height: 250px;
+             border: 1px solid transparent;
+             border-radius: 10px;
+         }
+		.product img:hover{
+			transform:scale(1.1);
+
+		}
+		.fa-star {
+			color: #FFE234;
+		}
+		.price{
+			color: green;
+			font-weight: bold;
+		}
+		.product span {
+			text-decoration: line-through;
+			color: lightgrey;
+		}
+		.deals {
+		     display: grid;
+		     grid-template-columns: repeat(2,1fr);
+		     grid-gap: 20px;
+
+		}
+		.deals img {
+			width: 100%;
+			height: 90%; 
+		}
+		.section-Img {
+			position: relative;
+		}
+		.deal-1 {
+			position: absolute;
+			top:40px;
+			left: 20px;
+		}
+		.deal-1 h3,small,p,button,span{
+			margin-top: 10px;
+
+		}
+		.deal-1 h3{
+			color: green;
+		}
+		.new {
+			color: green;
+		}
+
+		.newarrivals {
+				display: grid;
+			grid-template-columns: repeat(4,1fr);
+			justify-content: space-around;
+			margin-top: 30px;
+			grid-gap: 20px;
+		}
+/*        .releases img {*/
+       /*           width: 100px;
+                  height:100px;
+        }
+        .releases {
+            width: 100%;
+        }
+        table,th,td {
+            border: 2px solid transparent;
+            border-collapse: collapse;
+        }
+        .releases th {
+            text-align:left;
+            padding-bottom: 30px;
+        }
+        .product-img {
+            display: flex;
+            align-items: center;
+        }
+        .product-details {
+            max-width: calc(100%-110px);
+        }*/
+        .section-2 {
+            height: 575px;
+        }
+        .section-1 {
+            height: 575px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid transparent;
+            padding: 8px;
+            vertical-align: top;
+            text-align: left;
+        }
+        th {
+            text-align: left;
+        }
+        .product-cell {
+            display: flex;
+            align-items: center;
+        }
+        .product-image {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .product-details {
+            max-width: calc(100% - 110px);
+            margin-top: 4px;
+        }
+        .product-details span {
+            text-decoration: line-through;
+            color: lightgrey;
+        }
+        .product-details .MRP {
+            color: green;
+        }
+        .details img{
+            width: 20px;
+            height: 20px;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid transparent;
+            background-color: #83988c;
+            padding: 20px;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .location .logo {
+            width: 30%;
+        }
+        .location small {
+            margin-left: -110px;
+        }
+        .location h6 {
+            margin-top: 30px;
+        }
+        .info li {
+            list-style-type: none;
+            padding: 8px;
+        }
+        .social {
+            width: 5%;
+            height: 30px;
+        }
+        .akhil {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+	</style>
+</head>
+
+<body>
+    <header>
+    	<div class="logo">
+    	<img src="./logo.png" alt="logo"/>
+        </div>
+        <nav class="navbar">
+        	<ul>
+        		<li><a href="#">home</a></li>
+        		<li><a href="#">shop</a></li>
+        		<li><a href="#">my account</a></li>
+        		<li><a href="#">compare</a></li>
+        		<li><a href="#">login</a></li>
+        	</ul>
+        </nav>
+        <div class="cart">
+        		<input class="searchicon" type="text" name="search" placeholder="search products"/>
+        		<a class="icon" href="#"><img src="./icon-heart.svg" width="20px" height="20px" ></a>
+        		<a class="icon" href="#"><img src="./icon-cart.svg" width="20px" height="20px"></a>
+        </div>
+    </header>
+    <main class="main">
+     <section class="main-Home">
+    	<div class="offer">
+    	<h6>Hot Promotions</h6>
+    	<div class="heading">
+    	<h3>Fashion Trending </h3>
+    	<h1>Great</h1>
+        </div>
+    	<h1>Collection</h1>
+    	<h6>Save more with coupons & up to 20% off</h6>
+    	<button> Shop Now</button>
+        </div>
+        <div class="home">
+        	<img src="home-img.png" alt="home">
+        </div>
+    </section>
+    <div class="popular">
+        	<h4>Popular Categories</h4>
+        </div>
+        <section class="popular-categories">
+        <div class="category">
+        	<img src="category-1.jpg" alt="shirt">
+        	<p>T-Shirt</p>
+        </div>
+        <div class="category">
+        	<img src="category-2.jpg" alt="shirt">
+        	<p>Bags</p>
+        </div>
+        <div class="category">
+        	<img src="category-3.jpg" alt="shirt">
+        	<p>Sandal</p>
+        </div>
+        <div class="category">
+        	<img src="category-4.jpg" alt="shirt">
+        	<p>Scarf Cap</p>
+        </div>
+        <div class="category">
+        	<img src="category-5.jpg" alt="shirt">
+        	<p>Shoes</p>
+        </div>
+        <div class="category">
+        	<img src="category-6.jpg" alt="shirt">
+        	<p>Pillowcase</p>
+        </div>
+    </section>
+    <section>
+    	<div class="buttons">
+    	<a href="#">Featured</a>
+    	<a href="#">Popular</a>
+    	<a href="#">New Added</a>
+    </div>
+    </section>
+    <section>
+    	<div class="featured">
+    <!-- 		<div class="featured-1"> -->
+    		 <div class="product">
+                    <img src="product-1-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+                <div class="product">
+                    <img src="product-2-1.jpg" alt="product2">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                   <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+                <div class="product">
+                    <img src="product-3-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+                <div class="product">
+                    <img src="product-4-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+           <!--  </div> -->
+            <!-- <div class="featured-2"> -->
+                <div class="product">
+                    <img src="product-5-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                   <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+                <div class="product">
+                    <img src="product-6-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+                <div class="product">
+                    <img src="product-7-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+                <div class="product">
+                    <img src="product-8-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="price">$238.85 <span>$399.00</span></p>
+               <!--  </div> -->
+            </div>
+    	</div>
+    </section>
+    <section class="deals">
+    	<div class="section-Img">
+    	<div class="deal-1">
+    	<div>
+            <h3>Deals of the Day</h3>
+            <small>Limited qunatities</small>
+            <p>Summer Collection New Modern Design</p>
+            <p class="offer-Price">$139.00<span>$160.99</span></p>
+            <p>Hurry Up! Offer Ends In:</p>
+            <button>09</button>  :
+            <button>22</button>  :
+            <button>50</button>  :
+            <button>19</button>  
+    	</div>
+    	<div>
+    	    <span>Days</span>
+    	    <span>Hours</span>
+    	    <span>Mins</span>
+    	    <span>Sec</span>
+    	</div>
+        </div>
+    	<div class="section-1">
+    		<img src="deals-1.jpg" alt="deals">   
+    	</div>
+    </div>
+    <div class="section-Img">
+    	<div class="deal-1">
+    	<div>
+            <h3>Deals of the Day</h3>
+            <small>Limited qunatities</small>
+            <p>Summer Collection New Modern Design</p>
+            <p class="offer-Price">$139.00<span>$160.99</span></p>
+            <p>Hurry Up! Offer Ends In:</p>
+            <button>09</button>  :
+            <button>22</button>  :
+            <button>50</button>  :
+            <button>19</button>  
+    	</div>
+    	<div>
+    	    <span>Days</span>
+    	    <span>Hours</span>
+    	    <span>Mins</span>
+    	    <span>Sec</span>
+    	</div>
+        </div>
+    	<div class="section-2">
+    		<img src="deals-2.png" alt="deals">   
+    	</div>
+    </div>
+    </section>
+    <section>
+    		<p class="new">New<span>Arrivals</span></p>
+    		<div class="newarrivals">
+    		<div class="product">
+                    <img src="product-1-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+                <div class="product">
+                    <img src="product-2-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+                <div class="product">
+                    <img src="product-3-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+                <div class="product">
+                    <img src="product-4-1.jpg" alt="product1">
+                    <p>Colorful Pattern Shirts</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="price">$238.85 <span>$399.00</span></p>
+                </div>
+    	</div>
+    </section>
+    <section>
+    	<table class="releases">
+    		<!-- <th>Hot Releases</th>
+    		<tr><img src="showcase-img-1.jpg"><p>Floral print</p></tr>
+            <tr><img src="showcase-img-2.jpg"><p>Floral print</p></tr>
+            <tr><img src="showcase-img-3.jpg"><p>Floral print</p></tr>
+            <th>Deals & Outlet</th>
+            <tr><img src="showcase-img-4.jpg"><p>Floral print</p></tr>
+            <tr><img src="showcase-img-5.jpg"><p>Floral print</p></tr>
+            <tr><img src="showcase-img-6.jpg"><p>Floral print</p></tr>
+            <th>Top Selling</th>
+            <tr><img src="showcase-img-7.jpg"><p>Floral print</p></tr>
+            <tr><img src="showcase-img-8.jpg"><p>Floral print</p></tr>
+            <tr><img src="showcase-img-9.jpg"><p>Floral print</p></tr>
+            <th>Trendy</th>
+            <tr><img src="showcase-img-7.jpg"><p>Floral print</p></tr>
+            <tr><img src="showcase-img-8.jpg"><p>Floral print</p></tr>
+            <tr><img src="showcase-img-9.jpg"><p>Floral print</p></tr> -->
+            <tr>
+                <th>Hot Releases</th>
+                <th>Deals & Outlet</th>
+                <th>Top Selling</th>
+                <th>Trendy</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-1.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+                 <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-2.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+                 <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-3.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+                 <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-4.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-1.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+                 <td>
+                    <div class="product-cell">  
+                   <div class="product-img"> 
+                    <img src="showcase-img-2.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+                 <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-3.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+                 <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-4.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-1.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+                 <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-2.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+                 <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-3.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+                 <td>
+                    <div class="product-cell">
+                   <div class="product-img"> 
+                    <img src="showcase-img-4.jpg" class="product-image">
+                   </div>
+                   <div class="product-details">
+                       <p>Floral Print Casual..</p>
+                       <p class="MRP">$238.85<span>$245.8</span></p>
+                   </div>
+                   </div>
+                </td>
+            </tr>
+    	</table>
+    </section>
+    <section class="details">
+        <p><img src="icon-email.svg"> Sign in to Newsletter</p>
+        <p>...and recieve $25 coupon for first shopping.</p>
+        <div class="mail">
+        <input type="text" name="email" placeholder="Enter Your Email">
+        <button>Subscribe</button>  
+        </div> 
+    </section>
+    </main>
+    <footer class="edge">
+        <section class="location">
+            <img src="logo.png" class="logo">  
+            <small>Contact</small>
+            <p>Address:13 Tlemcen Road,Street 32, Beb-Wahren</p>
+            <p>Phone:+01 2222 365 /(+91)01 2345 65758</p>
+            <p>Hours:10:00-18:00,Mon-Sat</p>
+            <h6>Follow Me</h6>
+            <img src="icon-facebook.svg" class="social">
+            <img src="icon-instagram.svg" class="social">
+            <img src="icon-pinterest.svg" class="social">
+            <img src="icon-twitter.svg" class="social">
+            <img src="icon-youtube.svg" class="social">
+        </section>
+        <section class="about">
+            <h4>Address</h4>
+            <nav class="info">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#"> Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Support Center</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="account">
+            <h4>My Account</h4>
+            <nav class="info">
+                <ul>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">View Cart</a></li>
+                    <li><a href="#">My Wishlist</a></li>
+                    <li><a href="#">Track My Order</a></li>
+                    <li><a href="#">help</a></li>
+                    <li><a href="#">Order</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="payment">
+            <h4>Secured Payed Gateways</h4>
+            <img src="payment-method.png">
+        </section>
+    </footer>
+    <hr>
+    <div class="akhil">
+        <p>@2024AKHIL,All right reserved</p>
+        <p>Design by AKHIL</p>
+    </div>
+</body>
+</html>
